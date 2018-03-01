@@ -30,17 +30,30 @@ react-native link react-native-android-open-settings
     ```gradle
     dependencies {
       ...
-    + compile project(':react-native-android-open-settings')
+      compile project(':react-native-android-open-settings')
     }
     ...
     ```
-3. Edit `MainActivity.java` to look like this
+3. Edit `MainApplication.java` to look like this
 
     ```java
     ...
 
     import com.levelasquez.androidopensettings.AndroidOpenSettingsPackage; // <-- add this import
+
+    public class MainApplication extends Application implements ReactApplication {
     ...
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+        return Arrays.<ReactPackage>asList(
+                new MainReactPackage(),
+                ...
+                new AndroidOpenSettingsPackage() // <-- add this
+        );
+    }
+    ...
+}
     ```
 
 ## Usage
