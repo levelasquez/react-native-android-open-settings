@@ -1,0 +1,22 @@
+{
+  "name": "react-native-android-open-settings",
+  "version": "1.0.0",
+  "description": "Open android settings from your react native app",
+  "main": "index.js",
+  "keywords": [
+    "react-native",
+    "settings",
+    "android",
+    "open"
+  ],
+  "author": "Leonardo Velasquez",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levelasquez/react-native-android-open-settings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/levelasquez/react-native-android-open-settings/issues"
+  },
+  "homepage": "https://github.com/levelasquez/react-native-android-open-settings/#readme"
+}
