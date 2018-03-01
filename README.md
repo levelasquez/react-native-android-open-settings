@@ -60,59 +60,59 @@ react-native link react-native-android-open-settings
 
 ```javascript
 
-import AndroidOpenSettings from 'react-native-android-open-settings';
+import AndroidOpenSettings from 'react-native-android-open-settings'
 
 // Open general settings menu
-AndroidOpenSettings.generalSettings();
+AndroidOpenSettings.generalSettings()
 
 // Open app settings menu
-AndroidOpenSettings.appDetailsSettings();
+AndroidOpenSettings.appDetailsSettings()
 
 // Open wifi settings menu
-AndroidOpenSettings.wifiSettings();
+AndroidOpenSettings.wifiSettings()
 
 // Open location source settings menu
-AndroidOpenSettings.locationSourceSettings();
+AndroidOpenSettings.locationSourceSettings()
 
 // Open wireless settings menu
-AndroidOpenSettings.wirelessSettings();
+AndroidOpenSettings.wirelessSettings()
 
 // Open airplane mode settings menu
-AndroidOpenSettings.airplaneModeSettings();
+AndroidOpenSettings.airplaneModeSettings()
 
 // Open apn settings menu
-AndroidOpenSettings.apnSettings();
+AndroidOpenSettings.apnSettings()
 
 // Open bluetooth settings menu
-AndroidOpenSettings.bluetoothSettings();
+AndroidOpenSettings.bluetoothSettings()
 
 // Open date settings menu
-AndroidOpenSettings.dateSettings();
+AndroidOpenSettings.dateSettings()
 
 // Open locale settings menu
-AndroidOpenSettings.localeSettings();
+AndroidOpenSettings.localeSettings()
 
 // Open input method settings menu
-AndroidOpenSettings.inputMethodSettings();
+AndroidOpenSettings.inputMethodSettings()
 
 // Open display settings menu
-AndroidOpenSettings.displaySettings();
+AndroidOpenSettings.displaySettings()
 
 // Open security settings menu
-AndroidOpenSettings.securitySettings();
+AndroidOpenSettings.securitySettings()
 
 // Open internal storage settings menu
-AndroidOpenSettings.internalStorageSettings();
+AndroidOpenSettings.internalStorageSettings()
 
 // Open memory card settings menu
-AndroidOpenSettings.memoryCardSettings();
+AndroidOpenSettings.memoryCardSettings()
 
 // Open accessibility settings menu
-AndroidOpenSettings.accessibilitySettings();
+AndroidOpenSettings.accessibilitySettings()
 
 // Open application settings menu
-AndroidOpenSettings.applicationSettings();
+AndroidOpenSettings.applicationSettings()
 
 // Open device info settings menu
-AndroidOpenSettings.deviceInfoSettings();
+AndroidOpenSettings.deviceInfoSettings()
 ```
