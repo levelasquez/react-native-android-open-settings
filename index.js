@@ -38,7 +38,7 @@ const applicationSettings = () => RNAndroidOpenSettings.applicationSettings()
 
 const deviceInfoSettings = () => RNAndroidOpenSettings.deviceInfoSettings()
 
-export {
+module.exports = {
   generalSettings,
   appSettings,
   wifiSettings,

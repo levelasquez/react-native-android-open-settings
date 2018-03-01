@@ -24,7 +24,7 @@ public class AndroidOpenSettingsPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new OpenSettings(reactContext));
+        modules.add(new AndroidOpenSettings(reactContext));
 
         return modules;
     }
