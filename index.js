@@ -4,6 +4,8 @@ const { RNAndroidOpenSettings } = NativeModules
 
 const generalSettings = () => RNAndroidOpenSettings.generalSettings()
 
+const homeSettings = () => RNAndroidOpenSettings.homeSettings()
+
 const appDetailsSettings = () => RNAndroidOpenSettings.appDetailsSettings()
 
 const wifiSettings = () => RNAndroidOpenSettings.wifiSettings()
@@ -40,6 +42,7 @@ const deviceInfoSettings = () => RNAndroidOpenSettings.deviceInfoSettings()
 
 module.exports = {
   generalSettings,
+  homeSettings,
   appDetailsSettings,
   wifiSettings,
   locationSourceSettings,
