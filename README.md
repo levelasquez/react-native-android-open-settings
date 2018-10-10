@@ -30,7 +30,7 @@ react-native link react-native-android-open-settings
     ```gradle
     dependencies {
       ...
-      compile project(':react-native-android-open-settings')
+      implementation project(':react-native-android-open-settings')
     }
     ...
     ```
