@@ -30,7 +30,7 @@ react-native link react-native-android-open-settings
     ```gradle
     dependencies {
       ...
-      compile project(':react-native-android-open-settings')
+      implementation project(':react-native-android-open-settings')
     }
     ...
     ```
@@ -64,6 +64,9 @@ import AndroidOpenSettings from 'react-native-android-open-settings'
 
 // Open general settings menu
 AndroidOpenSettings.generalSettings()
+
+// Open home screen settings menu
+AndroidOpenSettings.homeSettings()
 
 // Open app settings menu
 AndroidOpenSettings.appDetailsSettings()
