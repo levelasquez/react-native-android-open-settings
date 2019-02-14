@@ -118,4 +118,7 @@ AndroidOpenSettings.applicationSettings()
 
 // Open device info settings menu
 AndroidOpenSettings.deviceInfoSettings()
+
+// Open application notification settings menu
+AndroidOpenSettings.appNotificationSettings()
 ```

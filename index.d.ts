@@ -18,4 +18,5 @@ declare module "react-native-android-open-settings" {
   const accessibilitySettings: () => void;
   const applicationSettings: () => void;
   const deviceInfoSettings: () => void;
+  const appNotificationSettings: () => void;
 }
