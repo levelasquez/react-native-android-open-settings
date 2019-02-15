@@ -121,4 +121,12 @@ AndroidOpenSettings.deviceInfoSettings()
 
 // Open application notification settings menu
 AndroidOpenSettings.appNotificationSettings()
+
+// Calls the passed in settings function and then
+// returns a promise that resolves after they're back
+AndroidOpenSettings.openAsPromised(
+    AndroidOpenSettings.appNotificationSettings
+).then(() => {
+    // back from settings, do stuff!
+});
 ```
