@@ -1,4 +1,4 @@
-import { NativeModules } from 'react-native'
+import { NativeModules, AppState } from 'react-native'
 
 const { RNAndroidOpenSettings } = NativeModules
 
@@ -42,6 +42,25 @@ const deviceInfoSettings = () => RNAndroidOpenSettings.deviceInfoSettings()
 
 const appNotificationSettings = () => RNAndroidOpenSettings.appNotificationSettings()
 
+const openAsPromised = (settingFunc)  => {
+  return new Promise((resolve, reject) => {
+    const listener = (state) => {
+      if (state === 'active') {
+        AppState.removeEventListener('change', listener)
+        resolve()
+      }
+    };
+    AppState.addEventListener('change', listener)
+    try {
+      settingFunc()
+    }
+    catch (e) {
+      AppState.removeEventListener('change', listener)
+      reject(e)
+    }
+  });
+}
+
 module.exports = {
   generalSettings,
   homeSettings,
@@ -63,4 +82,5 @@ module.exports = {
   applicationSettings,
   deviceInfoSettings,
   appNotificationSettings,
+  openAsPromised
 }
