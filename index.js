@@ -42,6 +42,8 @@ const deviceInfoSettings = () => RNAndroidOpenSettings.deviceInfoSettings()
 
 const appNotificationSettings = () => RNAndroidOpenSettings.appNotificationSettings()
 
+const appNotificationChannelSettings = (channelId) => RNAndroidOpenSettings.appNotificationChannelSettings(channelId)
+
 module.exports = {
   generalSettings,
   homeSettings,
@@ -63,4 +65,5 @@ module.exports = {
   applicationSettings,
   deviceInfoSettings,
   appNotificationSettings,
+  appNotificationChannelSettings,
 }

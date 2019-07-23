@@ -1,8 +1,11 @@
 package com.levelasquez.androidopensettings;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.content.pm.PackageManager;
+import android.os.Build;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
@@ -32,7 +35,7 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
             reactContext.startActivity(intent);
         }
     }
-    
+
     @ReactMethod
     public void homeSettings() {
         Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
@@ -229,6 +232,19 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
 
         if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
             reactContext.startActivity(intent);
+        }
+    }
+
+    @ReactMethod
+    public void appNotificationChannelSettings(String channelId) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && channelId != null) {
+            Activity activity = getCurrentActivity();
+            Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
+            intent.putExtra(Settings.EXTRA_APP_PACKAGE, activity.getPackageName());
+            intent.putExtra(Settings.EXTRA_CHANNEL_ID, channelId);
+            if (activity.getPackageManager().resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY) != null) {
+                activity.startActivity(intent);
+            }
         }
     }
 }
