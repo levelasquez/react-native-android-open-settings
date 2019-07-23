@@ -121,4 +121,7 @@ AndroidOpenSettings.deviceInfoSettings()
 
 // Open application notification settings menu
 AndroidOpenSettings.appNotificationSettings()
+
+// Open application notification channel settings menu
+AndroidOpenSettings.appNotificationChannelSettings(channelId)
 ```
