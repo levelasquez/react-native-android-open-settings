@@ -231,4 +231,19 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
             reactContext.startActivity(intent);
         }
     }
+
+    @ReactMethod
+    public void appChannelNotificationSettings(){
+        Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
+
+        //for Android 8 and above
+        intent.putExtra(Settings.EXTRA_APP_PACKAGE, reactContext.getPackageName());
+        intent.putExtra(Settings.EXTRA_CHANNEL_ID, reactContext.channelId);
+
+        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
+            reactContext.startActivity(intent);
+        }
+
+    }
+
 }
