@@ -1,8 +1,11 @@
 package com.levelasquez.androidopensettings;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
+import android.content.pm.PackageManager;
+import android.os.Build;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
@@ -234,7 +237,7 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void appChannelNotificationSettings(String channelId){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.0 && channelId != null) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && channelId != null) {
             Activity activity = getCurrentActivity();
             Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
             intent.putExtra(Settings.EXTRA_APP_PACKAGE, activity.getPackageName());
