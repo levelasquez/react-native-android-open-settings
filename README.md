@@ -123,5 +123,5 @@ AndroidOpenSettings.deviceInfoSettings()
 AndroidOpenSettings.appNotificationSettings()
 
 // Open custom notification settings menu (Android 8) 
-AndroidOpenSettings.appChannelNotificationSettings()
+AndroidOpenSettings.appChannelNotificationSettings(channelId)
 ```
