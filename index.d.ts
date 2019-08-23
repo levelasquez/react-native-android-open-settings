@@ -19,4 +19,5 @@ declare module "react-native-android-open-settings" {
   const applicationSettings: () => void;
   const deviceInfoSettings: () => void;
   const appNotificationSettings: () => void;
+  const appChannelNotificationSettings: () => void;
 }
