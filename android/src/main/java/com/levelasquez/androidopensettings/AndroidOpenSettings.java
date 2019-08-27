@@ -1,16 +1,24 @@
 package com.levelasquez.androidopensettings;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
 
+import com.facebook.react.bridge.ActivityEventListener;
+import com.facebook.react.bridge.LifecycleEventListener;
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AndroidOpenSettings extends ReactContextBaseJavaModule {
 
+    private List<Integer> usedRequestCodes = new ArrayList<>();
     private ReactContext reactContext;
 
     public AndroidOpenSettings(ReactApplicationContext reactContext) {
@@ -24,211 +32,208 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void generalSettings() {
+    public void generalSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
-    
+
     @ReactMethod
-    public void homeSettings() {
+    public void homeSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void appDetailsSettings() {
+    public void appDetailsSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         intent.setData(Uri.parse("package:" + reactContext.getPackageName()));
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void wifiSettings() {
+    public void wifiSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void locationSourceSettings() {
+    public void locationSourceSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void wirelessSettings() {
+    public void wirelessSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void airplaneModeSettings() {
+    public void airplaneModeSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_AIRPLANE_MODE_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void apnSettings() {
+    public void apnSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_APN_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void bluetoothSettings() {
+    public void bluetoothSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_BLUETOOTH_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void dateSettings() {
+    public void dateSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_DATE_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void localeSettings() {
+    public void localeSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void inputMethodSettings() {
+    public void inputMethodSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_INPUT_METHOD_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void displaySettings() {
+    public void displaySettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_DISPLAY_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void securitySettings() {
+    public void securitySettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_SECURITY_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void internalStorageSettings() {
+    public void internalStorageSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void memoryCardSettings() {
+    public void memoryCardSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_MEMORY_CARD_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void accessibilitySettings() {
+    public void accessibilitySettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void applicationSettings() {
+    public void applicationSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_APPLICATION_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void deviceInfoSettings() {
+    public void deviceInfoSettings(Promise promise) {
         Intent intent = new Intent(Settings.ACTION_DEVICE_INFO_SETTINGS);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
-        }
+
+        startActivity(intent, promise);
     }
 
     @ReactMethod
-    public void appNotificationSettings() {
+    public void appNotificationSettings(Promise promise) {
         Intent intent = new Intent("android.settings.APP_NOTIFICATION_SETTINGS"); // Settings.ACTION_APP_NOTIFICATION_SETTINGS
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 
-        //for Android 5-7
+        // for Android 5-7
         intent.putExtra("app_package", reactContext.getPackageName());
         intent.putExtra("app_uid", reactContext.getApplicationInfo().uid);
 
         // for Android 8 and above
         intent.putExtra("android.provider.extra.APP_PACKAGE", reactContext.getPackageName()); // Settings.EXTRA_APP_PACKAGE
 
+        startActivity(intent, promise);
+    }
+
+    private void startActivity(Intent intent, final Promise promise) {
         if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
-            reactContext.startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+
+            Activity currentActivity = getCurrentActivity();
+            final int requestCode = usedRequestCodes.size() == 0 ? 1
+                    : usedRequestCodes.get(usedRequestCodes.size() - 1) + 1;
+
+            usedRequestCodes.add(requestCode);
+
+            reactContext.addActivityEventListener(new ActivityEventListener() {
+                @Override
+                public void onActivityResult(Activity activity, int resultRequestCode, int resultCode, Intent data) {
+                    if (requestCode == resultRequestCode) {
+                        reactContext.removeActivityEventListener(this);
+
+                        usedRequestCodes.remove(Integer.valueOf(requestCode));
+
+                        reactContext.addLifecycleEventListener(new LifecycleEventListener() {
+                            boolean hasBeenPaused;
+
+                            @Override
+                            public void onHostResume() {
+                                if (hasBeenPaused) {
+                                    reactContext.removeLifecycleEventListener(this);
+                                    promise.resolve(null);
+                                }
+                            }
+
+                            @Override
+                            public void onHostPause() {
+                                hasBeenPaused = true;
+                            }
+
+                            @Override
+                            public void onHostDestroy() {
+
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onNewIntent(Intent intent) {
+                }
+            });
+
+            if (currentActivity != null) {
+                currentActivity.startActivityForResult(intent, requestCode);
+            } else {
+                promise.reject("2", "Null currentActivity");
+            }
+        } else {
+            promise.reject("1", "Null return from resolveActivity");
         }
     }
 }

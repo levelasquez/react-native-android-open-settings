@@ -2,45 +2,45 @@ import { NativeModules } from 'react-native'
 
 const { RNAndroidOpenSettings } = NativeModules
 
-const generalSettings = () => RNAndroidOpenSettings.generalSettings()
+const generalSettings = async () => RNAndroidOpenSettings.generalSettings()
 
-const homeSettings = () => RNAndroidOpenSettings.homeSettings()
+const homeSettings = async () => RNAndroidOpenSettings.homeSettings()
 
-const appDetailsSettings = () => RNAndroidOpenSettings.appDetailsSettings()
+const appDetailsSettings = async () => RNAndroidOpenSettings.appDetailsSettings()
 
-const wifiSettings = () => RNAndroidOpenSettings.wifiSettings()
+const wifiSettings = async () => RNAndroidOpenSettings.wifiSettings()
 
-const locationSourceSettings = () => RNAndroidOpenSettings.locationSourceSettings()
+const locationSourceSettings = async () => RNAndroidOpenSettings.locationSourceSettings()
 
-const wirelessSettings = () => RNAndroidOpenSettings.wirelessSettings()
+const wirelessSettings = async () => RNAndroidOpenSettings.wirelessSettings()
 
-const airplaneModeSettings = () => RNAndroidOpenSettings.airplaneModeSettings()
+const airplaneModeSettings = async () => RNAndroidOpenSettings.airplaneModeSettings()
 
-const apnSettings = () => RNAndroidOpenSettings.apnSettings()
+const apnSettings = async () => RNAndroidOpenSettings.apnSettings()
 
-const bluetoothSettings = () => RNAndroidOpenSettings.bluetoothSettings()
+const bluetoothSettings = async () => RNAndroidOpenSettings.bluetoothSettings()
 
-const dateSettings = () => RNAndroidOpenSettings.dateSettings()
+const dateSettings = async () => RNAndroidOpenSettings.dateSettings()
 
-const localeSettings = () => RNAndroidOpenSettings.localeSettings()
+const localeSettings = async () => RNAndroidOpenSettings.localeSettings()
 
-const inputMethodSettings = () => RNAndroidOpenSettings.inputMethodSettings()
+const inputMethodSettings = async () => RNAndroidOpenSettings.inputMethodSettings()
 
-const displaySettings = () => RNAndroidOpenSettings.displaySettings()
+const displaySettings = async () => RNAndroidOpenSettings.displaySettings()
 
-const securitySettings = () => RNAndroidOpenSettings.securitySettings()
+const securitySettings = async () => RNAndroidOpenSettings.securitySettings()
 
-const internalStorageSettings = () => RNAndroidOpenSettings.internalStorageSettings()
+const internalStorageSettings = async () => RNAndroidOpenSettings.internalStorageSettings()
 
-const memoryCardSettings = () => RNAndroidOpenSettings.memoryCardSettings()
+const memoryCardSettings = async () => RNAndroidOpenSettings.memoryCardSettings()
 
-const accessibilitySettings = () => RNAndroidOpenSettings.accessibilitySettings()
+const accessibilitySettings = async () => RNAndroidOpenSettings.accessibilitySettings()
 
-const applicationSettings = () => RNAndroidOpenSettings.applicationSettings()
+const applicationSettings = async () => RNAndroidOpenSettings.applicationSettings()
 
-const deviceInfoSettings = () => RNAndroidOpenSettings.deviceInfoSettings()
+const deviceInfoSettings = async () => RNAndroidOpenSettings.deviceInfoSettings()
 
-const appNotificationSettings = () => RNAndroidOpenSettings.appNotificationSettings()
+const appNotificationSettings = async () => RNAndroidOpenSettings.appNotificationSettings()
 
 module.exports = {
   generalSettings,

@@ -1,22 +1,22 @@
-declare module "react-native-android-open-settings" {
-  const generalSettings: () => void;
-  const homeSettings: () => void;
-  const appDetailsSettings: () => void;
-  const wifiSettings: () => void;
-  const locationSourceSettings: () => void;
-  const wirelessSettings: () => void;
-  const airplaneModeSettings: () => void;
-  const apnSettings: () => void;
-  const bluetoothSettings: () => void;
-  const dateSettings: () => void;
-  const localeSettings: () => void;
-  const inputMethodSettings: () => void;
-  const displaySettings: () => void;
-  const securitySettings: () => void;
-  const internalStorageSettings: () => void;
-  const memoryCardSettings: () => void;
-  const accessibilitySettings: () => void;
-  const applicationSettings: () => void;
-  const deviceInfoSettings: () => void;
-  const appNotificationSettings: () => void;
+declare module "react-native-android-open-settings-async" {
+  const generalSettings: () => Promise<void>;
+  const homeSettings: () => Promise<void>;
+  const appDetailsSettings: () => Promise<void>;
+  const wifiSettings: () => Promise<void>;
+  const locationSourceSettings: () => Promise<void>;
+  const wirelessSettings: () => Promise<void>;
+  const airplaneModeSettings: () => Promise<void>;
+  const apnSettings: () => Promise<void>;
+  const bluetoothSettings: () => Promise<void>;
+  const dateSettings: () => Promise<void>;
+  const localeSettings: () => Promise<void>;
+  const inputMethodSettings: () => Promise<void>;
+  const displaySettings: () => Promise<void>;
+  const securitySettings: () => Promise<void>;
+  const internalStorageSettings: () => Promise<void>;
+  const memoryCardSettings: () => Promise<void>;
+  const accessibilitySettings: () => Promise<void>;
+  const applicationSettings: () => Promise<void>;
+  const deviceInfoSettings: () => Promise<void>;
+  const appNotificationSettings: () => Promise<void>;
 }
