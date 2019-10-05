@@ -13,12 +13,15 @@ Using yarn
 ```
 yarn add react-native-android-open-settings
 ```
+### Using React Native >=0.60
+Linking the package is not required anymore with [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md).
 
-### Automatic Install
+### Using React Native <0.60
+#### Automatic Install
 ```
 react-native link react-native-android-open-settings
 ```
-### Manual Install
+#### Manual Install
 
 1. In `settings.gradle`, insert the following code:
     ```gradle
@@ -38,28 +41,26 @@ react-native link react-native-android-open-settings
 
     ```java
     ...
-
     import com.levelasquez.androidopensettings.AndroidOpenSettingsPackage; // <-- add this import
 
     public class MainApplication extends Application implements ReactApplication {
     ...
 
-    @Override
-    protected List<ReactPackage> getPackages() {
-        return Arrays.<ReactPackage>asList(
-                new MainReactPackage(),
-                ...
-                new AndroidOpenSettingsPackage() // <-- add this
-        );
-    }
+	    @Override
+	    protected List<ReactPackage> getPackages() {
+	        return Arrays.<ReactPackage>asList(
+	                new MainReactPackage(),
+	                ...
+	                new AndroidOpenSettingsPackage() // <-- add this
+	        );
+	    }
     ...
-}
+	}
     ```
 
 ## Usage
 
 ```javascript
-
 import AndroidOpenSettings from 'react-native-android-open-settings'
 
 // Open general settings menu
