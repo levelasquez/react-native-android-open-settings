@@ -121,4 +121,7 @@ AndroidOpenSettings.deviceInfoSettings()
 
 // Open application notification settings menu
 AndroidOpenSettings.appNotificationSettings()
+
+// Open sound settings menu
+AndroidOpenSettings.soundSettings()
 ```
