@@ -32,7 +32,7 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
             reactContext.startActivity(intent);
         }
     }
-    
+
     @ReactMethod
     public void homeSettings() {
         Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
@@ -227,6 +227,16 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
         // for Android 8 and above
         intent.putExtra("android.provider.extra.APP_PACKAGE", reactContext.getPackageName()); // Settings.EXTRA_APP_PACKAGE
 
+        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
+            reactContext.startActivity(intent);
+        }
+    }
+
+    @ReactMethod
+    public void soundSettings() {
+        Intent intent = new Intent(Settings.ACTION_SOUND_SETTINGS);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
             reactContext.startActivity(intent);
         }
