@@ -32,7 +32,7 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
             reactContext.startActivity(intent);
         }
     }
-    
+
     @ReactMethod
     public void homeSettings() {
         Intent intent = new Intent(Settings.ACTION_HOME_SETTINGS);
@@ -77,6 +77,17 @@ public class AndroidOpenSettings extends ReactContextBaseJavaModule {
     @ReactMethod
     public void wirelessSettings() {
         Intent intent = new Intent(Settings.ACTION_WIRELESS_SETTINGS);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        if (intent.resolveActivity(reactContext.getPackageManager()) != null) {
+            reactContext.startActivity(intent);
+        }
+    }
+
+    @ReactMethod
+    public void tetheringSettings() {
+        Intent intent = new Intent();
+        intent.setClassName("com.android.settings", "com.android.settings.TetherSettings");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
         if (intent.resolveActivity(reactContext.getPackageManager()) != null) {

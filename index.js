@@ -14,6 +14,8 @@ const locationSourceSettings = () => RNAndroidOpenSettings.locationSourceSetting
 
 const wirelessSettings = () => RNAndroidOpenSettings.wirelessSettings()
 
+const tetheringSettings = () => RNAndroidOpenSettings.tetheringSettings()
+
 const airplaneModeSettings = () => RNAndroidOpenSettings.airplaneModeSettings()
 
 const apnSettings = () => RNAndroidOpenSettings.apnSettings()
@@ -49,6 +51,7 @@ module.exports = {
   wifiSettings,
   locationSourceSettings,
   wirelessSettings,
+  tetheringSettings,
   airplaneModeSettings,
   apnSettings,
   bluetoothSettings,

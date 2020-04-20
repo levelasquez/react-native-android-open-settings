@@ -80,6 +80,9 @@ AndroidOpenSettings.locationSourceSettings()
 // Open wireless settings menu
 AndroidOpenSettings.wirelessSettings()
 
+// Open tethering settings menu
+AndroidOpenSettings.tetheringSettings()
+
 // Open airplane mode settings menu
 AndroidOpenSettings.airplaneModeSettings()
 

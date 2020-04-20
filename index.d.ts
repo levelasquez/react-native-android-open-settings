@@ -5,6 +5,7 @@ declare module "react-native-android-open-settings" {
   const wifiSettings: () => void;
   const locationSourceSettings: () => void;
   const wirelessSettings: () => void;
+  const tetheringSettings: () => void;
   const airplaneModeSettings: () => void;
   const apnSettings: () => void;
   const bluetoothSettings: () => void;
