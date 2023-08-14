@@ -10,6 +10,7 @@ declare module "react-native-android-open-settings" {
   const bluetoothSettings: () => void;
   const dateSettings: () => void;
   const localeSettings: () => void;
+  const appLocaleSettings: () => void;
   const inputMethodSettings: () => void;
   const displaySettings: () => void;
   const securitySettings: () => void;
