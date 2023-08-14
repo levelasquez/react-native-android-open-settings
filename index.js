@@ -24,6 +24,8 @@ const dateSettings = () => RNAndroidOpenSettings.dateSettings()
 
 const localeSettings = () => RNAndroidOpenSettings.localeSettings()
 
+const appLocaleSettings = () => RNAndroidOpenSettings.appLocaleSettings()
+
 const inputMethodSettings = () => RNAndroidOpenSettings.inputMethodSettings()
 
 const displaySettings = () => RNAndroidOpenSettings.displaySettings()
@@ -54,6 +56,7 @@ module.exports = {
   bluetoothSettings,
   dateSettings,
   localeSettings,
+  appLocaleSettings,
   inputMethodSettings,
   displaySettings,
   securitySettings,
